@@ -29,9 +29,10 @@ const Label = styled.div`
 interface Props {
   image: string;
   name: string;
+  id: number;
 }
 
-function Game({ image, name }: Props) {
+function Game({ id, image, name }: Props) {
   return (
     <Container>
       <Image src={image} />
