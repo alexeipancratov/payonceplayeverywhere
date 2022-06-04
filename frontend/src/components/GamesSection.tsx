@@ -65,7 +65,11 @@ function GamesSection() {
         {!isDesktop && (
           <MobileLabel>
             <GameRowLabel>Buy or claim</GameRowLabel>
-            <Game name="Elden ring" image={EldenRing} />
+            <Game
+              id={GameEnum.ELDEN_RING}
+              name="Elden ring"
+              image={EldenRing}
+            />
           </MobileLabel>
         )}
         {isDesktop && (
