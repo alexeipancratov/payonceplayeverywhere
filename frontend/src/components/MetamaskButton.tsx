@@ -22,9 +22,10 @@ const Flex = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90px;
-  padding: 10px;
+  width: 85px;
+  padding: 7px;
   border: 2px solid ${({ theme }) => theme.color.ternary};
+  border-radius: 5px;
 `;
 
 export function MetamaskButton() {
