@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { createGame } from "../services/GameService";
 import Button from "./Button";
 
 const Container = styled.div`
@@ -36,7 +37,7 @@ function Game({ image, name }: Props) {
       <Image src={image} />
       <GameInfo>
         <Label>{name}</Label>
-        <Button label="Buy" width={"30%"} />
+        <Button onClick={() => createGame(name)} label="Buy" width={"30%"} />
       </GameInfo>
     </Container>
   );

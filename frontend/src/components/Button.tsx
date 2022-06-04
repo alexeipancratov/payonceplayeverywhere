@@ -43,7 +43,7 @@ const MainButton = styled.button<{ width: string }>`
 interface Props {
   label: string;
   width: string;
-  onClick?: any;
+  onClick: any;
   disabled?: boolean;
 }
 

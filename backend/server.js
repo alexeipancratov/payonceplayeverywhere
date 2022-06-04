@@ -37,7 +37,9 @@ app.post("/gamePurchases", async (req, res) => {
   );
 
   try {
-    const receipt = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
+    const receipt = await web3.eth.sendSignedTransaction(
+      signedTx.rawTransaction
+    );
     console.log(`Transaction hash: ${receipt.transactionHash}`);
     res.sendStatus(200);
   } catch (e) {

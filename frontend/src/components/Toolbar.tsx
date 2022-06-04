@@ -11,6 +11,7 @@ const StickyToolBarWrapper = styled.div`
   padding: 1.5vh;
   overflow: hidden;
   width: 100%;
+  z-index: 10;
 `;
 
 const PlayEverywhere = styled.span`
