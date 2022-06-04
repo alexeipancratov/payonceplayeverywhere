@@ -28,3 +28,17 @@ create a secret.json file with your eth private key with the following content
 npm install
 npm start
 ```
+
+_Smart Contracts_
+
+```
+cd contracts
+npm install
+npx hardhat node
+```
+
+Open a second terminal
+
+```
+npx hardhat run scripts/deploy.js --network localhost
+```
