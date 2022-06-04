@@ -1,7 +1,7 @@
 import MetaMaskOnboarding from "@metamask/onboarding";
 import React, { useEffect, useRef, useState } from "react";
 import styled, { useTheme } from "styled-components";
-import SVGMetamask from "./SVGMetamask";
+import Button from "./Button";
 declare let window: any;
 
 const ONBOARD_TEXT = "Install";
@@ -13,8 +13,7 @@ const Metamask = styled.button`
   padding: 0;
   border: none;
   background: none;
-  color: ${({ disabled, theme }) =>
-    !disabled ? theme.color.ternary : theme.color.secondary};
+  color: ${({ theme }) => theme.color.ternary};
   cursor: pointer;
 `;
 
@@ -22,9 +21,10 @@ const Flex = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90px;
-  padding: 10px;
+  width: 85px;
+  padding: 7px;
   border: 2px solid ${({ theme }) => theme.color.ternary};
+  border-radius: 5px;
 `;
 
 export function MetamaskButton() {
@@ -77,11 +77,11 @@ export function MetamaskButton() {
     }
   };
   return (
-    <Metamask disabled={isConnected} onClick={onClick}>
-      <Flex>
-        {buttonText}
-        <SVGMetamask fill={theme.color.ternary} />
-      </Flex>
-    </Metamask>
+    <Button
+      disabled={isConnected}
+      onClick={onClick}
+      label={buttonText}
+      width="100%"
+    />
   );
 }

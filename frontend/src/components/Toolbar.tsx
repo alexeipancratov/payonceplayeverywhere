@@ -7,8 +7,8 @@ const StickyToolBarWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
   top: 0;
-  background-color: ${({ theme }) => theme.color.primary};
-  padding: 0.5vw;
+  background-color: ${({ theme }) => theme.color.secondary};
+  padding: 1vw;
   overflow: hidden;
   width: 100%;
 `;
@@ -21,11 +21,17 @@ const PlayEverywhere = styled.span`
   @media (max-width: ${({ theme }) => theme.screenSize.mobileL}) {
     grid-column: 1/3;
   }
+  @media (max-width: ${({ theme }) => theme.screenSize.mobileS}) {
+    justify-self: baseline;
+  }
 `;
 
 const ConnectWalletButton = styled.div`
   justify-self: center;
   grid-column: 3/3;
+  @media (max-width: ${({ theme }) => theme.screenSize.mobileL}) {
+    justify-self: auto;
+  }
 `;
 
 function Toolbar() {

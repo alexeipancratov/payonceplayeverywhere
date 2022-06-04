@@ -4,6 +4,7 @@ export const styledTheme = {
     secondary: `#2f333d`,
     ternary: `white`,
     disabled: `grey`,
+    black: `black`,
   },
   fontSize: {
     small: "16px",
