@@ -11,7 +11,13 @@ contract GameCopy is ERC721URIStorage {
     constructor() ERC721("GameCopy", "GCPY") {
     }
 
-    function buyGameCopy(address player, string memory tokenURI) public returns (uint256) {
+    modifier onlyGameStore() {
+        // TODO: Verify if address belongs to a video games store.
+        require(true, "Only a video games store can invoke this function.");
+        _;
+    }
+
+    function buyGameCopy(address player, string memory tokenURI) public onlyGameStore returns (uint256) {
         _counter.increment();
 
         uint256 newItemId = _counter.current();
