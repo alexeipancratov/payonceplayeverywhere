@@ -21,7 +21,9 @@ const GameInfo = styled.div`
   align-items: center;
 `;
 
-const Label = styled.div``;
+const Label = styled.div`
+  font-weight: bold;
+`;
 
 interface Props {
   image: string;
