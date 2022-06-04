@@ -8,12 +8,14 @@ const StickyToolBarWrapper = styled.div`
   position: fixed;
   top: 0;
   background-color: ${({ theme }) => theme.color.secondary};
-  padding: 1vw;
+  padding: 1.5vh;
   overflow: hidden;
   width: 100%;
+  z-index: 10;
 `;
 
 const PlayEverywhere = styled.span`
+  font-weight: bold;
   color: ${({ theme }) => theme.color.ternary};
   justify-self: center;
   align-self: center;
@@ -30,7 +32,7 @@ const ConnectWalletButton = styled.div`
   justify-self: center;
   grid-column: 3/3;
   @media (max-width: ${({ theme }) => theme.screenSize.mobileL}) {
-    justify-self: auto;
+    justify-self: flex-start;
   }
 `;
 

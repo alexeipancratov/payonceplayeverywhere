@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { createGame } from "../services/GameService";
 import Button from "./Button";
 
 const Container = styled.div`
@@ -21,20 +22,23 @@ const GameInfo = styled.div`
   align-items: center;
 `;
 
-const Label = styled.div``;
+const Label = styled.div`
+  font-weight: bold;
+`;
 
 interface Props {
   image: string;
   name: string;
+  id: number;
 }
 
-function Game({ image, name }: Props) {
+function Game({ id, image, name }: Props) {
   return (
     <Container>
       <Image src={image} />
       <GameInfo>
         <Label>{name}</Label>
-        <Button label="Buy" width={"30%"} />
+        <Button onClick={() => createGame(name)} label="Buy" width={"30%"} />
       </GameInfo>
     </Container>
   );

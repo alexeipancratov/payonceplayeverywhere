@@ -1,6 +1,5 @@
 import MetaMaskOnboarding from "@metamask/onboarding";
 import React, { useEffect, useRef, useState } from "react";
-import styled, { useTheme } from "styled-components";
 import Button from "./Button";
 declare let window: any;
 
@@ -8,31 +7,11 @@ const ONBOARD_TEXT = "Install";
 const CONNECT_TEXT = "Connect";
 const CONNECTED_TEXT = "Connected";
 
-const Metamask = styled.button`
-  font-size: ${({ theme }) => theme.fontSize.small};
-  padding: 0;
-  border: none;
-  background: none;
-  color: ${({ theme }) => theme.color.ternary};
-  cursor: pointer;
-`;
-
-const Flex = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 85px;
-  padding: 7px;
-  border: 2px solid ${({ theme }) => theme.color.ternary};
-  border-radius: 5px;
-`;
-
 export function MetamaskButton() {
   const [buttonText, setButtonText] = useState(ONBOARD_TEXT);
   const [isConnected, setIsConnected] = useState(false);
   const [accounts, setAccounts] = useState<string[]>([]);
   const onboarding = useRef<MetaMaskOnboarding>();
-  const theme = useTheme();
 
   useEffect(() => {
     if (!onboarding.current) {
