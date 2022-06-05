@@ -3,7 +3,7 @@
 ![hackathon_logo](https://user-images.githubusercontent.com/3188163/171972513-9324040e-33b2-4574-86ef-93cecc2408fd.png)
 
 ## Description
-dApp which allows purchasing video games and then claim the copy of ownership on any other gaming console by presenting an NFT which confirms that you already bought it for another console/PC.
+dApp which allows purchasing of video games and then claiming the copy of ownership on any other game store/platform by presenting an NFT which confirms that a user has already bought it at another game store or gaming platform.
 
 ### Advantages for gamers
 - Save money by paying for a game only once
