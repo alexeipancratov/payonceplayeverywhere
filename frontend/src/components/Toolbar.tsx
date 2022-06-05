@@ -40,7 +40,7 @@ function Toolbar() {
   return (
     <>
       <StickyToolBarWrapper>
-        <PlayEverywhere>PayOncePlayEverywhere</PlayEverywhere>
+        <PlayEverywhere>Pay Once, Play Everywhere</PlayEverywhere>
         <ConnectWalletButton>
           <MetamaskButton />
         </ConnectWalletButton>

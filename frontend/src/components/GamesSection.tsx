@@ -6,9 +6,9 @@ import Warhammer from "../assets/warhammer.jpg";
 import Game from "./Game";
 
 export enum GameEnum {
-  ELDEN_RING,
-  WARHAMMER_SKULLS,
-  SOULDIERS,
+  ELDEN_RING = 1,
+  WARHAMMER_SKULLS = 2,
+  SOULDIERS = 3,
 }
 
 const GameRow = styled.div`
@@ -65,21 +65,11 @@ function GamesSection() {
         {!isDesktop && (
           <MobileLabel>
             <GameRowLabel>Buy or claim</GameRowLabel>
-            <Game
-              id={GameEnum.ELDEN_RING}
-              name="Elden ring"
-              image={EldenRing}
-            />
+            <Game id={GameEnum.ELDEN_RING} name="Elden ring" image={EldenRing} />
           </MobileLabel>
         )}
-        {isDesktop && (
-          <Game id={GameEnum.ELDEN_RING} name="Elden ring" image={EldenRing} />
-        )}
-        <Game
-          id={GameEnum.WARHAMMER_SKULLS}
-          name="Warhammer skulls"
-          image={Warhammer}
-        />
+        {isDesktop && <Game id={GameEnum.ELDEN_RING} name="Elden Ring" image={EldenRing} />}
+        <Game id={GameEnum.WARHAMMER_SKULLS} name="Warhammer Skulls" image={Warhammer} />
         <Game id={GameEnum.SOULDIERS} name="Souldiers" image={Souldier} />
       </Games>
     </GameRow>

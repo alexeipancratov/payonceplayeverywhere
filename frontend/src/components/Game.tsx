@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { createGame } from "../services/GameService";
+import { claimGame, buyGame } from "../services/GameService";
 import Button from "./Button";
 
 const Container = styled.div`
@@ -33,12 +33,25 @@ interface Props {
 }
 
 function Game({ id, image, name }: Props) {
+  const [isClaimed, setIsClaimed] = useState<boolean>(false);
+
+  const onBuy = async () => {
+    await buyGame(name);
+    setIsClaimed(true);
+  };
+
+  const onClaim = async () => {
+    const isSuccess = await claimGame(id);
+    setIsClaimed(isSuccess);
+  };
+
   return (
     <Container>
       <Image src={image} />
       <GameInfo>
         <Label>{name}</Label>
-        <Button onClick={() => createGame(name)} label="Buy" width={"30%"} />
+        <Button onClick={() => onBuy()} label={isClaimed ? "Bought" : "Buy"} disabled={isClaimed} width={"30%"} />
+        <Button onClick={() => onClaim()} label={isClaimed ? "Claimed" : "Claim"} disabled={isClaimed} width={"30%"} />
       </GameInfo>
     </Container>
   );
