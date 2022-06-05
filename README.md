@@ -14,6 +14,12 @@ dApp which allows purchasing video games and then claim the copy of ownership on
 - Gamers can still be charged a small portion of the full price for claiming a copy on another platform
 - Game copy ownership verification across different stores/platforms becomes possible and super easy
 
+### How game stores can manage the shared NFT smart contract?
+
+Different game stores accross the industry can form a DAO which would allow them to have their addresses having access to the minting functionality of the NFT smart contract. They can also make collective decisions regarding its future development.
+
+![Untitled (2)](https://user-images.githubusercontent.com/3188163/172034055-e73e5e29-ac4a-43ba-8f40-33867474b5ec.png)
+
 ## Architecture
 
 ![Untitled (1)](https://user-images.githubusercontent.com/3188163/172033374-b72b0a14-4f96-46aa-b830-d5a8e166a5a7.png)
