@@ -5,6 +5,8 @@
 ## Description
 dApp which allows purchasing of video games and then claiming the copy of ownership on any other game store/platform by presenting an NFT which confirms that a user has already bought it at another game store or gaming platform.
 
+DEMO - https://www.youtube.com/watch?v=KcsA_IfsZOs
+
 ### Advantages for gamers
 - Save money by paying for a game only once
 - Play the games you own on any other platform/console (they have been released on)
