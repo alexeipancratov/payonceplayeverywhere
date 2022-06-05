@@ -24,7 +24,7 @@ Different game stores accross the industry can form a DAO which would allow them
 
 ![Untitled (1)](https://user-images.githubusercontent.com/3188163/172033374-b72b0a14-4f96-46aa-b830-d5a8e166a5a7.png)
 
-The UI and API parts should be replicated for each game store separately.
+The UI and API parts should be replicated for each game store separately, while the smart contract should be shared across them.
 
 ## How to run project
 _Frontend_
